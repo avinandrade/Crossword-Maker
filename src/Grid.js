@@ -21,7 +21,7 @@ class Grid extends Component {
           <div key={`row-${i}`} className='grid-row'>
             {columns.map(function(j) {
               return(
-                <div key={`square-${j}`} className='grid-square'/>
+                <div key={`column-${j}`} className='grid-column'/>
               )
             })}
           </div>
