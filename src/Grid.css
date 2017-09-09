@@ -1,0 +1,32 @@
+.grid{
+  height: 512px;
+  width: 512px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 2px solid black
+}
+
+.grid-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+.grid-square {
+  flex-grow: 1;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-square-black {
+  background-color: black;
+}
