@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './Grid.css';
 
 
 class Grid extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      numberOfRows : 4,
-      numberOfColumns : 2
-    }
+
+  handleClick(row, column) {
+    this.props.onClick(row, column)
   }
+
   render() {
-  const rows = Array.apply(null, {length: this.state.numberOfRows}).map(Number.call, Number)
-  const columns = Array.apply(null, {length: this.state.numberOfColumns}).map(Number.call, Number)
+    const y = this
     return (
     <div className='grid'>
-      {rows.map(function(i) {
+      {this.props.grid.map(function(row, i) {
         return(
           <div key={`row-${i}`} className='grid-row'>
-            {columns.map(function(j) {
+            {row.map(function(column, j) {
+              const color = column==0 ? 'black' : 'white'
               return(
-                <div key={`column-${j}`} className='grid-column'/>
+                <div
+                  key={`column-${j}`}
+                  className='grid-column'
+                  style={{backgroundColor:color}}
+                  onClick={() => y.handleClick(i, j)}
+                  >
+                </div>
               )
             })}
           </div>
