@@ -21,7 +21,17 @@ class Grid extends Component {
           <div key={`row-${i}`} className='grid-row'>
             {squares.map(function(j) {
               return(
-                <div key={`square-${j}`} className='grid-square'/>
+                <div key={`square-${j}`} className='grid-square'>
+                  {[i].map(function(i) {
+                    if (i == 1){
+                    return(
+                      <div className='clue-number'>
+                          {'hi'}
+                      </div>
+                      )
+                    }
+                    })}
+                </div>
               )
             })}
           </div>
