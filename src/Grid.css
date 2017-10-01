@@ -16,7 +16,7 @@
   flex-grow: 1;
 }
 
-.grid-square {
+.grid-column {
   flex-grow: 1;
   border-color: black;
   border-width: 1px;
@@ -28,7 +28,7 @@
   position: relative;
 }
 
-.grid-square-black {
+.grid-column-black {
   background-color: black;
 }
 
@@ -36,6 +36,6 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  font-size: 0.5em;
+  font-size: 0.75em;
 
 }
